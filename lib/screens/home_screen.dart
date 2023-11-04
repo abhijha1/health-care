@@ -2,6 +2,7 @@ import 'dart:typed_data';
 
 import 'package:health_care/backend/getimage.dart';
 import 'package:health_care/screens/contactscreen.dart';
+import 'package:health_care/service/procupine_service.dart';
 import 'package:health_care/utils/contacts.dart';
 import 'package:health_care/widgets/contact_circle.dart';
 import 'package:flutter/cupertino.dart';
@@ -11,7 +12,7 @@ import 'package:image_picker/image_picker.dart';
 import '../utils/const.dart';
 import '../widgets/card_items.dart';
 import '../widgets/card_main.dart';
-import '../widgets/card_section.dart';
+import '../widgets/card_selection.dart';
 import '../widgets/custom_clipper.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -27,6 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
+    //PPService.porcupineManager.start();
   }
 
   void setImage(ImageSource source) async {
