@@ -1,12 +1,9 @@
-
-
-package com.example.hotword_detection
-
+package com.example.health_care
 import android.app.Service
 import android.content.Intent
 import android.os.IBinder
 
-class HotwordService : Service() {
+class HotwordServices: Service() {
     override fun onBind(intent: Intent?): IBinder? {
         return null
     }
@@ -19,7 +16,7 @@ class HotwordService : Service() {
 
     // TODO: When hotword detected, trigger Flutter app
     fun onHotwordDetected() {
-        val launchIntent = packageManager.getLaunchIntentForPackage("com.example.hotword_detection")
+        val launchIntent = packageManager.getLaunchIntentForPackage("com.example.health_care")
         startActivity(launchIntent)
     }
 }
