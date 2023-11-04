@@ -1,6 +1,11 @@
 package com.example.health_care
 
 import io.flutter.embedding.android.FlutterActivity
+<<<<<<< HEAD
+
+
+class MainActivity: FlutterActivity() {
+=======
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
 import androidx.annotation.NonNull
@@ -22,4 +27,5 @@ class MainActivity: FlutterActivity() {
         }
     }
 
+>>>>>>> 2892205b82ab4c76c97787461e1b27868b6fe031
 }
