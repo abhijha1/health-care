@@ -1,3 +1,4 @@
+import 'package:health_care/screens/countdown.dart';
 import 'package:health_care/utils/const.dart';
 import 'package:health_care/widgets/custom_clipper.dart';
 import 'package:flutter/material.dart';
@@ -111,6 +112,7 @@ class ContactScreen extends StatelessWidget {
                        ),
                      ),
                       GestureDetector(
+                        onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (context)=>CountDownPage())),
                         child: CircleAvatar(
                          backgroundImage: AssetImage("assets/icons/call.png"),
                            radius: 65
