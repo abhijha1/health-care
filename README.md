@@ -28,4 +28,4 @@ Many individuals, regardless of age, encounter challenges in managing their heal
 
 1. Clone the repository.
    ```bash
-   git clone https://github.com/yourusername/MariaHealthCompanion.git
+   git clone https://github.com/dixitsanskar/health-care.git
