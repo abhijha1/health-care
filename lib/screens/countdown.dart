@@ -6,7 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:health_care/utils/const.dart';
 
 class CountDownPage extends StatefulWidget {
-  const CountDownPage({super.key});
+  final String name;
+  const CountDownPage({super.key, required this.name});
 
   @override
   State<CountDownPage> createState() => _CountDownPageState();
@@ -24,7 +25,7 @@ class _CountDownPageState extends State<CountDownPage> {
             height: Constants.screenHeight! * 0.05,
           ),
           Text(
-            "Calling Ruhi...",
+            "Calling ${widget.name} ...",
             style: TextStyle(
                 fontSize: Constants.screenHeight! * 0.05, color: Colors.red),
           ),
