@@ -4,9 +4,14 @@ import 'package:get/get.dart'; // Import GetX
 import 'package:health_care/service/procupine_service.dart';
 
 import 'package:health_care/utils/const.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class CountDownPage extends StatelessWidget {
   const CountDownPage({super.key});
+  // void urlcall() async
+  // {
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -32,6 +37,15 @@ class CountDownPage extends StatelessWidget {
                         Padding(
                           padding: EdgeInsets.all(10),
                           child: CircularCountDownTimer(
+                            onComplete: () {
+                              // When countdown is complete, stop the service and navigate to the home screen
+                              //urlcall();
+            
+                              PPService.b.value = 0;
+                              //PPService.porcupineManager.stop();
+                              launchUrlString("whatsapp://voice?phone=+918317072134");
+                              Navigator.of(context).popAndPushNamed('/home');
+                            },
                             isReverse: true,
                             width: Constants.screenWidth! * 0.7,
                             height: Constants.screenHeight! * 0.4,

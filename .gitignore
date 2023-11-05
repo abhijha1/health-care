@@ -49,4 +49,6 @@ app.*.map.json
 pubspec.lock
 analysis_options.yaml
 health_care.iml
+/lib/utils/api.dart
+/android/app/src/main/res/api_key.xml
 

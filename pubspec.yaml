@@ -41,6 +41,9 @@ dependencies:
   get: ^4.6.5
   porcupine_flutter: ^3.0.0
   circular_countdown_timer: ^0.2.3
+  url_launcher: ^6.1.14
+  android_intent: ^2.0.2
+  package_info: ^2.0.2
 
 dev_dependencies:
   flutter_test:

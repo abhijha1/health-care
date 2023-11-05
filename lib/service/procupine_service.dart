@@ -2,6 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:health_care/utils/api.dart';
 import 'package:porcupine_flutter/porcupine.dart';
 import 'package:porcupine_flutter/porcupine_error.dart';
 import 'package:porcupine_flutter/porcupine_manager.dart';
@@ -38,9 +39,9 @@ void _wakeWordCallback(int keywordIndex) {
   void createPorcupineManager() async {
     try {
   porcupineManager = await PorcupineManager.fromKeywordPaths(
-          "2nUaIFLFC+aQkBRGFTPmtF0j9dU0gXekj/ItyHOYjLPXYSMv1Hc3rw==",
+          Apikey,
           ["assets/model.ppn"],
-          _wakeWordCallback, modelPath: "assets/hi.pv");
+          _wakeWordCallback, sensitivities: [0.8],modelPath: "assets/hi.pv");
           porcupineManager.start();
     } on PorcupineException catch (err) {
       print(err.message);

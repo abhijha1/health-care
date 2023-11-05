@@ -1,70 +1,51 @@
-// import android.app.Service
-// import android.content.Intent
-// import android.os.IBinder
-// import ai.picovoice.porcupine.Porcupine
-// import ai.picovoice.porcupine.PorcupineManager
-// import ai.picovoice.porcupine.PorcupineException
 
-// class HotwordService : Service() {
-//     // private var porcupineManager: PorcupineManager? = null
+import ai.picovoice.porcupine.*
+import android.app.Service
+import android.content.Intent
+import android.os.IBinder
+import androidx.core.content.ContextCompat.startActivity
+import java.security.Provider
 
-//     // var wakeWordcallback: PorcupineManagerCallback = object : PorcupineManagerCallback() {
-//     //     operator fun invoke(keywordIndex: Int) {
-//     //         if (keywordIndex == 0) {
-//     //             // porcupine detected
-//     //         } else if (keywordIndex == 1) {
-//     //             // bumblebee detected
-//     //         }
-//     //     }
-//     // }
 
-//     // override fun onCreate() {
-//     //     super.onCreate()
+class HotwordServices : Service(){
+    private var porcupineManager: PorcupineManager? = null
+    val API_token = "2nUaIFLFC+aQkBRGFTPmtF0j9dU0gXekj/ItyHOYjLPXYSMv1Hc3rw=="
+    var wakeWordcallback = PorcupineManagerCallback { keywordIndex ->
+        if (keywordIndex == 0) {
+            print("hello world")
+            val launchIntent = packageManager.getLaunchIntentForPackage("com.example.health_care/startService")
+            startActivity(launchIntent)
+        } else if (keywordIndex == 1) {
+            print("hello")
+        }
+    }
 
-//     //     // Initialize PorcupineManager
-//     //         PorcupineMananger porcupineManager = new PorcupineManager.Builder()
-//     //                 .setAccessKey("2nUaIFLFC+aQkBRGFTPmtF0j9dU0gXekj/ItyHOYjLPXYSMv1Hc3rw==")
-//     //                 .setKeywords([Porcupine.BuiltInKeyword.PORCUPINE])
-//     //                 .build(context, wakeWordCallback);
+    override fun onCreate(){
+        super.onCreate()
+        porcupineManager = PorcupineManager.Builder()
+                .setAccessKey(API_token)
+                .setKeywordPath("android/app/src/main/assets/model.ppn")
+                .setModelPath("android/app/src/main/assets/hi.pv")
+                .build(this, wakeWordcallback)
 
-//     // }
+        porcupineManager?.start()
+    }
 
-//     // override fun onBind(intent: Intent?): IBinder? {
-//     //     return null
-//     // }
+    override fun onBind(intent: Intent?): IBinder? {
+        return null
+    }
 
-//     // override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-//     //     // Start Porcupine detection
-//     //     startHotwordDetection()
+    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+        porcupineManager = PorcupineManager.Builder()
+        .setAccessKey(API_token)
+        .setKeywordPath("android/app/src/main/assets/model.ppn")
+        .setModelPath("android/app/src/main/assets/hi.pv")
+        .build(this, wakeWordcallback)
 
-//     //     return START_STICKY
-//     // }
+        porcupineManager?.start()
 
-//     // fun startHotwordDetection() {
-//     //     try {
-//     //         porcupineManager?.start()
-//     //     } catch (e: PorcupineException) {
-//     //         e.printStackTrace()
-//     //         // Handle start error
-//     //     }
-//     // }
+        return START_STICKY
+    }
 
-//     // fun onHotwordDetected() {
-//     //     // Stop Porcupine detection
-//     //     stopHotwordDetection()
 
-//     //     // Bring the Flutter app to the foreground
-//     //     val launchIntent = packageManager.getLaunchIntentForPackage("com.example.health_care")
-//     //     startActivity(launchIntent)
-//     // }
-
-//     // fun stopHotwordDetection() {
-//     //     try {
-//     //         porcupineManager?.stop()
-//     //     } catch (e: PorcupineException) {
-//     //         e.printStackTrace()
-//     //         // Handle stop error
-//     //     }
-//     // }
-
-// }
+}
