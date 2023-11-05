@@ -32,8 +32,6 @@ dependencies:
     sdk: flutter
   image_picker: ^1.0.4
   lottie: ^2.0.0
-  firebase_core: ^2.21.0
-  firebase_auth: ^4.12.1
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -41,6 +39,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: ^6.1.0
   get: ^4.6.5
+  porcupine_flutter: ^3.0.0
+  circular_countdown_timer: ^0.2.3
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
