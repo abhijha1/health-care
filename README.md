@@ -30,4 +30,5 @@ Many individuals, regardless of age, encounter challenges in managing their heal
    ```bash
    git clone https://github.com/dixitsanskar/health-care.git
 
-   ![Alt text](Screenshot_1699157150.png) ![Alt text](Screenshot_1699157158.png) ![Alt text](Screenshot_1699157163.png) ![Alt text](Screenshot_1699157368.png)
+   
+![](Screenshot_1699157150-1.png) ![](Screenshot_1699157158-1.png) ![](Screenshot_1699157163-1.png) ![](Screenshot_1699157368-1.png)
