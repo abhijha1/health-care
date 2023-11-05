@@ -6,11 +6,11 @@ List<Map<String, String>> contact = [
   },
   {
     'name':'Sarthak (Son)',
-    'number': '9812034617',
+    'number': '9873139471',
     'image':"assets/profilephoto/man2.png"
   },{
     'name':'Jaspal',
-    'number': '7894563218',
+    'number': '9667695756',
     'image':"assets/profilephoto/man.png"
   },{
     'name':'Meenal',

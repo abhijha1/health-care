@@ -32,6 +32,10 @@ dependencies:
     sdk: flutter
   image_picker: ^1.0.4
   lottie: ^2.0.0
+  gesture_x_detector: ^1.1.1
+  swipeable_button_view: ^0.0.2
+  url_launcher: ^6.2.1
+  flutter_phone_direct_caller: ^2.1.1
 
 
   # The following adds the Cupertino Icons font to your application.

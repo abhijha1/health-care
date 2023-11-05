@@ -105,22 +105,27 @@ class ContactScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                     GestureDetector(
-                       child: CircleAvatar(
-                         backgroundImage: AssetImage("assets/icons/message.png"),
-                           radius: 60
-                       ),
-                     ),
                       GestureDetector(
-                        onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (context)=>CountDownPage(name: name,))),
                         child: CircleAvatar(
-                         backgroundImage: AssetImage("assets/icons/call.png"),
-                           radius: 65
-                                           ),
+                            backgroundImage:
+                                AssetImage("assets/icons/message.png"),
+                            radius: 60),
+                      ),
+                      GestureDetector(
+                        onTap: () =>
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => CountDownPage(
+                                      name: name,
+                                      number: number,
+                                    ))),
+                        child: CircleAvatar(
+                            backgroundImage:
+                                AssetImage("assets/icons/call.png"),
+                            radius: 65),
                       ),
                     ],
                   ),
-                  
+
                   // Align(
                   //   alignment: Alignment.bottomCenter,
                   //   child: SizedBox(
