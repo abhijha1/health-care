@@ -42,5 +42,18 @@ For the Maria project, we leverage a cutting-edge technology stack to bring our 
    ```bash
    flutter pub get
    flutter run
-   
-![](Screenshot_1699157150-1.png) ![](Screenshot_1699157158-1.png) ![](Screenshot_1699157163-1.png) ![](Screenshot_1699157368-1.png)
+
+
+## PPT Link: https://tinyurl.com/maria-healthcare
+
+## Team Details:
+- **1. Team Name: Swastik**
+- **2. Team ID: 6165**
+- **3. Team Members: Abhinav, Sanskar, Tarun, Satyam**
+- 
+
+## Screenshots: 
+![1](https://github.com/dixitsanskar/health-care/assets/96383876/fcf91b8c-25f4-4c6f-8ec8-a93a8552338d)
+![2](https://github.com/dixitsanskar/health-care/assets/96383876/94c9ea6a-671b-4804-bbc4-b43a326544a2)
+
+
