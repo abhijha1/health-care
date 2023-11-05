@@ -112,7 +112,7 @@ class ContactScreen extends StatelessWidget {
                        ),
                      ),
                       GestureDetector(
-                        onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (context)=>CountDownPage())),
+                        onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (context)=>CountDownPage(name: name,))),
                         child: CircleAvatar(
                          backgroundImage: AssetImage("assets/icons/call.png"),
                            radius: 65
