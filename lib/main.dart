@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:health_care/service/procupine_service.dart';
+import 'package:health_care/widgets/counntmodalscreen.dart';
 import 'package:porcupine_flutter/porcupine_manager.dart';
 import '../screens/home_screen.dart';
 import '../utils/const.dart';
@@ -46,6 +47,7 @@ class _MyAppState extends State<MyApp> {
       home: HomeScreen(),
       routes: {
         '/home': (context) => HomeScreen(),
+        '/counter': (context) => CountDownPage(),
       },
     );
   }

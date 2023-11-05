@@ -1,5 +1,6 @@
 import 'dart:typed_data';
 
+import 'package:get/get.dart';
 import 'package:health_care/backend/getimage.dart';
 import 'package:health_care/screens/contactscreen.dart';
 import 'package:health_care/service/procupine_service.dart';
@@ -8,11 +9,12 @@ import 'package:health_care/widgets/contact_circle.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:health_care/widgets/counntmodalscreen.dart';
 import 'package:image_picker/image_picker.dart';
 import '../utils/const.dart';
 import '../widgets/card_items.dart';
 import '../widgets/card_main.dart';
-import '../widgets/card_selection.dart';
+import '../widgets/card_section.dart';
 import '../widgets/custom_clipper.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -29,7 +31,10 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     super.initState();
     //PPService.porcupineManager.start();
+   
   }
+
+
 
   void setImage(ImageSource source) async {
     Uint8List finalimage = await getImage(source);
@@ -39,12 +44,16 @@ class _HomeScreenState extends State<HomeScreen> {
       isImage = true;
     });
   }
+   //   PPService controller = Get.put(PPService());
 
   @override
   Widget build(BuildContext context) {
     double statusBarHeight = MediaQuery.of(context).padding.top;
+    Constants().init(context);
+   // PPService controller = Get.put(PPService());
+    
 
-    return Scaffold(
+    return Obx(() => PPService.b.value == 1? CountDownPage():  Scaffold(
       backgroundColor: Constants.backgroundColor,
       body: Stack(
         children: <Widget>[
@@ -296,6 +305,7 @@ class _HomeScreenState extends State<HomeScreen> {
           )
         ],
       ),
-    );
+    )
+     );
   }
 }
