@@ -86,7 +86,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: <Widget>[
                     Expanded(
                       child: Text(
-                        "Good Morning,\nPatient",
+                        "Good Morning,\nJoginder",
                         style: TextStyle(
                             fontSize: 25,
                             fontWeight: FontWeight.w900,
@@ -103,7 +103,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             : const CircleAvatar(
                                 radius: 40.0,
                                 backgroundImage: AssetImage(
-                                    'assets/icons/profile_picture.png')),
+                                    'assets/profilephoto/chicha.png')),
                         Positioned(
                             bottom: 6,
                             child: GestureDetector(

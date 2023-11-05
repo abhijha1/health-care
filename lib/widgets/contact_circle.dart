@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 
 class ContactCard extends StatelessWidget {
   final String name;
-  
+
   final String image;
-  const ContactCard({super.key,required this.image,required this.name});
+  const ContactCard({super.key, required this.image, required this.name});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class ContactCard extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(right: 20),
       height: Constants.screenHeight! * 0.1,
-      width: Constants.screenWidth! * 0.4,
+      width: Constants.screenWidth! * 0.3,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(10.0)),
         shape: BoxShape.rectangle,
@@ -25,21 +25,27 @@ class ContactCard extends StatelessWidget {
           Expanded(
             child: Column(
               children: [
-                Image.asset(image),
-                Text(name),
+                Image.asset(
+                  image,
+                  fit: BoxFit.contain,
+                ),
+                Text(
+                  name,
+                  style: TextStyle(fontSize: Constants.screenWidth! * 0.04),
+                ),
               ],
             ),
-            flex: 3,
+            flex: 1,
           ),
           Expanded(
             child: Container(
               child: GestureDetector(
                   onTap: () {},
                   child: Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(4.0),
                       child: Icon(Icons.call_rounded))),
             ),
-            flex: 2,
+            flex: 1,
           )
         ],
       ),

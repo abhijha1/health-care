@@ -1,29 +1,21 @@
 List<Map<String, String>> contact = [
   {
-    'name':'Person 1',
-    'number': '123456789',
-    'image':"assets/icons/profile_picture.png"
+    'name':'Dr. Sania',
+    'number': '9876543217',
+    'image':"assets/profilephoto/auntydoctor.jpeg"
   },
   {
-    'name':'Person 2',
+    'name':'Sarthak (Son)',
     'number': '9812034617',
-    'image':"assets/icons/profile_picture.png"
+    'image':"assets/profilephoto/man2.png"
   },{
-    'name':'Person 3',
-    'number': '345456789',
-    'image':"assets/icons/profile_picture.png"
+    'name':'Jaspal',
+    'number': '7894563218',
+    'image':"assets/profilephoto/man.png"
   },{
-    'name':'Person 4',
+    'name':'Meenal',
     'number': '876456789',
-    'image':"assets/icons/profile_picture.png"
-  },{
-    'name':'Person 5',
-    'number': '092456789',
-    'image':"assets/icons/profile_picture.png"
-  },{
-    'name':'Person 5',
-    'number': '567456789',
-    'image':"assets/icons/profile_picture.png"
-  },
+    'image':"assets/profilephoto/aunty.png"
+  }
 
 ];

@@ -29,3 +29,6 @@ Many individuals, regardless of age, encounter challenges in managing their heal
 1. Clone the repository.
    ```bash
    git clone https://github.com/dixitsanskar/health-care.git
+
+   
+![](Screenshot_1699157150-1.png) ![](Screenshot_1699157158-1.png) ![](Screenshot_1699157163-1.png) ![](Screenshot_1699157368-1.png)
